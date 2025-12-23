@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Mermaid 示例</title>
+        <script src="mermaid.min.js"/>
+        <script>
+mermaid.initialize({ startOnLoad: true });
+        </script>
+    </head>
+    <body>
+        <div class="mermaid">
+gantt								
+    title RMeasureBox								
+    dateFormat  YYYY-MM-DD  								
+	excludes weekends  							
+	weekend friday					
+    section 	RMeasureBox							
+								
+		test	:	milestone,M0	,	2025-08-07	,	2025-08-07
+        </div>
+        
+        <div class="mermaid">
+---								
+								
+# displayMode: compact								
+config:								
+    themeCSS: " rect[class*=milestone] { fill: red } "								
+---								
+								
+gantt								
+    title RMeasureBox项目计划表								
+    dateFormat  YYYY-MM-DD  								
+	excludes weekends  						
+	%% todayMarker off							
+    section 	RMeasureBox							
+								
+		项目启动	:	milestone,M0	,	2025-08-07	,	2025-08-07
+		汇总并确认需求	:	W0110	,	2025-07-25	,	2025-08-01
+		召开启动会议	:	W0120	,	2025-08-01	,	2025-08-07
+		硬件设计交付	:	milestone,M1	,	2025-08-15	,	2025-08-15
+		硬件设计	:	W0210	,	2025-08-11	,	2025-08-18
+		硬件ready	:	milestone,M2	,	2025-08-25	,	2025-08-25
+		硬件生产	:	W0250	,	2025-08-18	,	2025-08-25
+		硬件测试	:	W0290	,	2025-08-25	,	2025-08-27
+		功能ready	:	milestone,M3	,	2025-09-08	,	2025-09-08
+		固件设计	:	W0300	,	2025-08-18	,	2025-09-01
+		固件测试	:	W0390	,	2025-08-27	,	2025-09-01
+		软件设计	:	W0400	,	2025-09-01	,	2025-09-08
+		软件测试	:	W0490	,	2025-09-01	,	2025-09-03
+		样机ready	:	milestone,M4	,	2025-09-15	,	2025-09-15
+		外壳设计	:	W0500	,	2025-08-18	,	2025-08-25
+		外壳生产	:	W0550	,	2025-08-25	,	2025-09-08
+		集成测试	:	W0690	,	2025-09-03	,	2025-09-10
+		6套样机ready	:	milestone,M5	,	2025-09-30	,	2025-09-30
+		试量产	:	W0950	,	2025-09-15	,	2025-09-29
+		现场测试	:	W0990	,	2025-09-15	,	2025-10-06
+          </div>
+    </body>
+</html>
